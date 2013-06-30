@@ -46,6 +46,27 @@ public class Asset extends Account{
 	}
 }	
 
+public class Liability extends Account{
+	public double totalamt;
+
+	public void calctotal{
+	totalamt = creditamt - debitamt;
+	}
+
+}
+
+public class Expense extends Account {
+	public double totalamt;
+
+	public void calctotal{
+	totalamt = debitamt - creditamt;
+	}
+	public void closeout{
+	debitamt = 0;
+	creditamt = 0;
+	calctotal;
+	}
+}
 
 public class Revenue extends Account {
 	public double totalamt;
